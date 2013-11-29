@@ -152,7 +152,9 @@ static NSString *const kImageCacheDirectoryName = @"LRImageCache";
         
         if (completionBlock)
         {
-            completionBlock([diskCachedImage decompressImage]);
+			completionBlock(diskCachedImage);
+
+//            completionBlock([diskCachedImage decompressImage]);
         }
     });
 }

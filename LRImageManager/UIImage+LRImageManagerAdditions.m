@@ -78,6 +78,8 @@
 
 - (instancetype)decompressImage
 {
+	return self;
+	
 	CGImageRef imageRef = self.CGImage;
     CGSize imageSize = CGSizeMake(CGImageGetWidth(imageRef), CGImageGetHeight(imageRef));
     CGRect imageRect = (CGRect){.origin = CGPointZero, .size = imageSize};

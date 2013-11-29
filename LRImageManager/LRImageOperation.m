@@ -153,7 +153,9 @@ completionHandler:(LRImageCompletionHandler)completionHandler
                                                                                          size:self.size];
             if (diskCachedImage)
             {
-                self.image = [diskCachedImage decompressImage];
+				self.image = diskCachedImage;
+
+//                self.image = [diskCachedImage decompressImage];
                 
                 [[LRImageCache sharedImageCache] cacheImage:self.image
                                                     withURL:self.url
@@ -328,7 +330,7 @@ completionHandler:(LRImageCompletionHandler)completionHandler
             self.image = [self.image croppedImage:(CGRect){.origin = CGPointZero, .size = self.size}];
         }
         
-        self.image = [self.image decompressImage];
+//        self.image = [self.image decompressImage];
         
         [[LRImageCache sharedImageCache] cacheImage:self.image
                                             withURL:self.url
